@@ -94,6 +94,18 @@ dist
 # Serverless directories
 .serverless/
 
+# IDE / Editor
+.idea
+
+# Service worker
+sw.*
+
+# Mac OSX
+.DS_Store
+
+# Vim swap files
+*.swp
+
 # FuseBox cache
 .fusebox/
 
