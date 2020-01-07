@@ -21,5 +21,8 @@ jobs:
         with:
           node-version: '10.x'
       - run: yarn install
+        working-dirctory: functions
       - run: yarn lint
+        working-dirctory: functions
       - run: yarn test
+        working-dirctory: functions
