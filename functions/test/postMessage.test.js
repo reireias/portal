@@ -1,11 +1,26 @@
 const test = require('firebase-functions-test')()
-const targets = require('../index.js')
 
 test.mockConfig({
   message: {
     token: 'hogehoge'
   }
 })
+
+jest.mock('firebase-admin', () => {
+  const firestore = jest.fn(() => ({
+    collection: jest.fn(() => ({
+      add: jest.fn()
+    }))
+  }))
+  firestore.Timestamp = {
+    now: jest.fn(() => 'dummy')
+  }
+  return {
+    initializeApp: jest.fn(),
+    firestore
+  }
+})
+const targets = require('../index.js')
 
 describe('GET', () => {
   it('should be 405 error', done => {
@@ -52,6 +67,34 @@ describe('POST', () => {
     })
   })
 
+  describe('invalid body', () => {
+    it('should be return Bad Request', done => {
+      const header = {
+        'x-api-token': 'hogehoge'
+      }
+      const req = {
+        method: 'POST',
+        body: {
+          hoge: 'fuga'
+        },
+        get(key) {
+          return header[key]
+        }
+      }
+      const res = {
+        status(code) {
+          expect(code).toBe(400)
+          return this
+        },
+        send(message) {
+          expect(message).toBe('Bad Request')
+          done()
+        }
+      }
+      targets.postMessage(req, res)
+    })
+  })
+
   describe('valid token', () => {
     it('should be return ok', done => {
       const header = {
@@ -59,6 +102,10 @@ describe('POST', () => {
       }
       const req = {
         method: 'POST',
+        body: {
+          text: 'hoge',
+          client: 'test'
+        },
         get(key) {
           return header[key]
         }
