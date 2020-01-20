@@ -1,8 +1,6 @@
 const functions = require('firebase-functions')
 const admin = require('firebase-admin')
 
-const TOKEN_KEY = 'x-api-token'
-
 admin.initializeApp(functions.config().firebase)
 const firestore = admin.firestore()
 
@@ -13,7 +11,7 @@ exports.postMessage = functions
       response.status(405).send('Method Not Allowed')
       return
     }
-    if (request.get(TOKEN_KEY) !== functions.config().message.token) {
+    if (request.body.token !== functions.config().message.token) {
       response.status(403).send('Access Denied')
       return
     }

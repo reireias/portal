@@ -44,13 +44,10 @@ describe('GET', () => {
 describe('POST', () => {
   describe('invalid token', () => {
     it('should be return Access Denied', done => {
-      const header = {
-        'x-api-token': 'invalid'
-      }
       const req = {
         method: 'POST',
-        get(key) {
-          return header[key]
+        body: {
+          token: 'invalid'
         }
       }
       const res = {
@@ -69,16 +66,11 @@ describe('POST', () => {
 
   describe('invalid body', () => {
     it('should be return Bad Request', done => {
-      const header = {
-        'x-api-token': 'hogehoge'
-      }
       const req = {
         method: 'POST',
         body: {
+          token: 'hogehoge',
           hoge: 'fuga'
-        },
-        get(key) {
-          return header[key]
         }
       }
       const res = {
@@ -97,17 +89,12 @@ describe('POST', () => {
 
   describe('valid token', () => {
     it('should be return ok', done => {
-      const header = {
-        'x-api-token': 'hogehoge'
-      }
       const req = {
         method: 'POST',
         body: {
+          token: 'hogehoge',
           text: 'hoge',
           client: 'test'
-        },
-        get(key) {
-          return header[key]
         }
       }
       const res = {
