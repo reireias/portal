@@ -5,7 +5,7 @@
       <v-toolbar-title>Portal</v-toolbar-title>
     </v-app-bar>
     <v-content>
-      <v-container>
+      <v-container v-if="!loading">
         <nuxt />
       </v-container>
     </v-content>
@@ -13,9 +13,11 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
-  data() {
-    return {}
+  computed: {
+    ...mapGetters(['loading'])
   }
 }
 </script>

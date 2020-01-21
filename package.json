@@ -16,6 +16,7 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.9.3",
     "@nuxtjs/pwa": "^3.0.0-0",
+    "firebase": "^7.7.0",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
