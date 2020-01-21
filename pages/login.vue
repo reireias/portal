@@ -1,5 +1,10 @@
 <template>
   <v-container>
+    <v-row v-if="error" justify="center">
+      <v-col cols="12" md="6">
+        <v-alert type="error">認証に失敗しました。</v-alert>
+      </v-col>
+    </v-row>
     <v-row justify="center">
       <v-col cols="12" md="6">
         <v-text-field v-model="email" label="Email"></v-text-field>
@@ -27,14 +32,21 @@ export default {
   data() {
     return {
       email: null,
-      password: null
+      password: null,
+      error: false
     }
   },
   methods: {
     async onClick() {
-      await firebase
-        .auth()
-        .signInWithEmailAndPassword(this.email, this.password)
+      try {
+        this.error = false
+        await firebase
+          .auth()
+          .signInWithEmailAndPassword(this.email, this.password)
+        this.$router.push('/')
+      } catch {
+        this.error = true
+      }
     }
   }
 }

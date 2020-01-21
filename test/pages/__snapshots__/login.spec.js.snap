@@ -2,6 +2,7 @@
 
 exports[`index is a Vue instance 1`] = `
 "<div class=\\"container\\">
+  <!---->
   <div class=\\"row justify-center\\">
     <div class=\\"col-md-6 col-12\\">
       <div class=\\"v-input theme--light v-text-field\\">
