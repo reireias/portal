@@ -1,10 +1,12 @@
 <template>
   <v-container>
-    <v-row v-if="error" justify="center">
-      <v-col cols="12" md="6">
-        <v-alert type="error">認証に失敗しました。</v-alert>
-      </v-col>
-    </v-row>
+    <v-scroll-y-transition>
+      <v-row v-if="error" justify="center">
+        <v-col cols="12" md="6">
+          <v-alert type="error">認証に失敗しました。</v-alert>
+        </v-col>
+      </v-row>
+    </v-scroll-y-transition>
     <v-row justify="center">
       <v-col cols="12" md="6">
         <v-text-field v-model="email" label="Email"></v-text-field>
@@ -20,7 +22,14 @@
       </v-col>
     </v-row>
     <v-row justify="center">
-      <v-btn @click="onClick">login</v-btn>
+      <v-btn
+        color="primary"
+        :loading="loading"
+        :disabled="loading"
+        @click="onClick"
+      >
+        login
+      </v-btn>
     </v-row>
   </v-container>
 </template>
@@ -33,18 +42,21 @@ export default {
     return {
       email: null,
       password: null,
+      loading: false,
       error: false
     }
   },
   methods: {
     async onClick() {
       try {
+        this.loading = true
         this.error = false
         await firebase
           .auth()
           .signInWithEmailAndPassword(this.email, this.password)
         this.$router.push('/')
       } catch {
+        this.loading = false
         this.error = true
       }
     }
