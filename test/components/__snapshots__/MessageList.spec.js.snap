@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MessageList is a Vue instance 1`] = `
+"<v-container-stub tag=\\"div\\">
+  <v-scroll-x-transition-stub group=\\"true\\" origin=\\"top center 0\\">
+    <v-row-stub tag=\\"div\\" justify=\\"center\\" class=\\"message-row\\">
+      <message-stub message=\\"[object Object]\\"></message-stub>
+    </v-row-stub>
+    <v-row-stub tag=\\"div\\" justify=\\"center\\" class=\\"message-row\\">
+      <message-stub message=\\"[object Object]\\"></message-stub>
+    </v-row-stub>
+    <v-row-stub tag=\\"div\\" justify=\\"center\\" class=\\"message-row\\">
+      <message-stub message=\\"[object Object]\\"></message-stub>
+    </v-row-stub>
+  </v-scroll-x-transition-stub>
+</v-container-stub>"
+`;

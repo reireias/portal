@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`index is a Vue instance 1`] = `
+exports[`login is a Vue instance 1`] = `
 "<div class=\\"container\\">
   <!---->
   <div class=\\"row justify-center\\">

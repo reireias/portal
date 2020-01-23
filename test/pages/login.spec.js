@@ -8,7 +8,7 @@ const localVue = createLocalVue()
 Vue.use(Vuetify)
 localVue.use(Vuetify)
 
-describe('index', () => {
+describe('login', () => {
   test('is a Vue instance', () => {
     const vuetify = new Vuetify()
     const wrapper = mount(tartget, {

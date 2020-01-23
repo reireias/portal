@@ -16,8 +16,10 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.9.3",
     "@nuxtjs/pwa": "^3.0.0-0",
+    "dateformat": "^3.0.3",
     "firebase": "^7.7.0",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.0.0",
+    "vuexfire": "^3.2.1"
   },
   "devDependencies": {
     "@mdi/font": "^4.8.95",

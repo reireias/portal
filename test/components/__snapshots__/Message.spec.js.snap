@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Message is a Vue instance 1`] = `
+"<v-card-stub loaderheight=\\"4\\" tag=\\"div\\" class=\\"message\\">
+  <v-container-stub tag=\\"div\\">
+    <v-row-stub tag=\\"div\\">
+      <v-col-stub cols=\\"12\\" sm=\\"6\\" tag=\\"div\\">
+        text
+      </v-col-stub>
+      <v-col-stub cols=\\"12\\" sm=\\"3\\" tag=\\"div\\">
+        client
+      </v-col-stub>
+      <v-col-stub cols=\\"12\\" sm=\\"3\\" tag=\\"div\\">
+        2020/01/01 00:00:00
+      </v-col-stub>
+    </v-row-stub>
+  </v-container-stub>
+</v-card-stub>"
+`;

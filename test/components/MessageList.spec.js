@@ -1,8 +1,8 @@
-import { mount, createLocalVue } from '@vue/test-utils'
+import { shallowMount, createLocalVue } from '@vue/test-utils'
 import Vue from 'vue'
 import Vuex from 'vuex'
 import Vuetify from 'vuetify'
-import tartget from '@/pages/index.vue'
+import tartget from '@/components/MessageList.vue'
 
 const localVue = createLocalVue()
 
@@ -10,7 +10,7 @@ Vue.use(Vuetify)
 localVue.use(Vuex)
 localVue.use(Vuetify)
 
-describe('index', () => {
+describe('MessageList', () => {
   let actions
   let getters
   let store
@@ -22,7 +22,9 @@ describe('index', () => {
       bindMessages: jest.fn()
     }
     getters = {
-      messages: jest.fn()
+      messages: () => {
+        return [{ text: 'dummy1' }, { text: 'dummy2' }, { text: 'dummy3' }]
+      }
     }
     store = new Vuex.Store({
       state: {},
@@ -32,7 +34,7 @@ describe('index', () => {
   })
 
   test('is a Vue instance', () => {
-    const wrapper = mount(tartget, {
+    const wrapper = shallowMount(tartget, {
       localVue,
       store,
       vuetify
@@ -40,6 +42,5 @@ describe('index', () => {
     expect(wrapper.isVueInstance()).toBeTruthy()
     expect(wrapper.html()).toMatchSnapshot()
     expect(actions.bindMessages).toHaveBeenCalled()
-    expect(getters.messages).toHaveBeenCalled()
   })
 })
