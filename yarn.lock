@@ -1494,16 +1494,16 @@
     jimp-compact "^0.8.0"
     workbox-cdn "^4.3.1"
 
-"@nuxtjs/vuetify@^1.10.2":
-  version "1.10.2"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/vuetify/-/vuetify-1.10.2.tgz#79d1f35ad76aa412985c4e83593e5d33a11b65ad"
-  integrity sha512-C8bCvk5UBAZVRlF+L2XhZPO790VZiXJcqZcbwf2Pa2QAgfE6H01tAQe9AnFEThpQADoAEGT8QoIaPciz0cFhFA==
+"@nuxtjs/vuetify@^1.11.0":
+  version "1.11.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/vuetify/-/vuetify-1.11.0.tgz#de8bc9e737479e6c167c2ff45122811362fee7b1"
+  integrity sha512-5yHaQ8sc9rrae6fAhJeqBbfbZWvhvD+rL3ROUQnTpvognvN2qTvDseM1fezyfQSYh28JRu4qGlTe2Lbgsq3msw==
   dependencies:
     deepmerge "^4.2.2"
     fibers "^4.0.2"
-    sass "^1.24.5"
+    sass "^1.25.0"
     sass-loader "^8.0.2"
-    vuetify "^2.2.4"
+    vuetify "^2.2.12"
     vuetify-loader "^1.4.3"
 
 "@nuxtjs/youch@^4.2.3":
@@ -9459,10 +9459,10 @@ sass-loader@^8.0.2:
     schema-utils "^2.6.1"
     semver "^6.3.0"
 
-sass@^1.24.5:
-  version "1.25.0"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.25.0.tgz#f8bd7dfbb39d6b0305e27704a8ebe637820693f3"
-  integrity sha512-uQMjye0Y70SEDGO56n0j91tauqS9E1BmpKHtiYNQScXDHeaE9uHwNEqQNFf4Bes/3DHMNinB6u79JsG10XWNyw==
+sass@^1.25.0:
+  version "1.26.2"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.26.2.tgz#4e17c5c2394e2ee7ffd653ac1d862314a6a5767b"
+  integrity sha512-9TRp1d1NH0mWH8rqaR/jCS05f/TFD1ykPF2zSYviprMhLb0EmXVqtKMUHsvDt3YIT/jbSK6qAvUlfCW/HJkdCw==
   dependencies:
     chokidar ">=2.0.0 <4.0.0"
 
@@ -10776,10 +10776,10 @@ vuetify-loader@^1.4.3:
   dependencies:
     loader-utils "^1.2.0"
 
-vuetify@^2.2.4:
-  version "2.2.4"
-  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-2.2.4.tgz#3f82cb1694a306aac7c88bda815ad812df555bf9"
-  integrity sha512-jhSdCeatWgHrY4Bb2FTi1sFfGDrVHLmkvI7pkG9FEF9TmZ+Qq7Ts85XAft9ucwU8ybB5nDmN6s+oeHJgvL+4tA==
+vuetify@^2.2.12:
+  version "2.2.15"
+  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-2.2.15.tgz#03466acb6b9afcba056abef3a6278d396cae18ff"
+  integrity sha512-okz+Q7YfCkLLJsxdldlYWUHcbRX/G+fo/0zSS3rXU+Ir76sxZzIOkSsqox1exFWQJn1PqA0itiHR0QTWygv8VA==
 
 vuex@^3.1.2:
   version "3.1.2"
