@@ -43,7 +43,7 @@ export default {
       email: null,
       password: null,
       loading: false,
-      error: false
+      error: false,
     }
   },
   methods: {
@@ -59,7 +59,7 @@ export default {
         this.loading = false
         this.error = true
       }
-    }
-  }
+    },
+  },
 }
 </script>

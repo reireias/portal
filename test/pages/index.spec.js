@@ -19,15 +19,15 @@ describe('index', () => {
   beforeEach(() => {
     vuetify = new Vuetify()
     actions = {
-      bindMessages: jest.fn()
+      bindMessages: jest.fn(),
     }
     getters = {
-      messages: jest.fn()
+      messages: jest.fn(),
     }
     store = new Vuex.Store({
       state: {},
       getters,
-      actions
+      actions,
     })
   })
 
@@ -35,7 +35,7 @@ describe('index', () => {
     const wrapper = mount(tartget, {
       localVue,
       store,
-      vuetify
+      vuetify,
     })
     expect(wrapper.isVueInstance()).toBeTruthy()
     expect(wrapper.html()).toMatchSnapshot()

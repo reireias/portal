@@ -19,17 +19,17 @@ describe('MessageList', () => {
   beforeEach(() => {
     vuetify = new Vuetify()
     actions = {
-      bindMessages: jest.fn()
+      bindMessages: jest.fn(),
     }
     getters = {
       messages: () => {
         return [{ text: 'dummy1' }, { text: 'dummy2' }, { text: 'dummy3' }]
-      }
+      },
     }
     store = new Vuex.Store({
       state: {},
       getters,
-      actions
+      actions,
     })
   })
 
@@ -37,7 +37,7 @@ describe('MessageList', () => {
     const wrapper = shallowMount(tartget, {
       localVue,
       store,
-      vuetify
+      vuetify,
     })
     expect(wrapper.isVueInstance()).toBeTruthy()
     expect(wrapper.html()).toMatchSnapshot()

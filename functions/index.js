@@ -23,16 +23,16 @@ exports.postMessage = functions
     const data = {
       text: request.body.text,
       client: request.body.client,
-      createdAt: admin.firestore.Timestamp.now()
+      createdAt: admin.firestore.Timestamp.now(),
     }
     await firestore.collection('messages').add(data)
     response.send('ok')
   })
 
-const validateMessageBody = body => {
+const validateMessageBody = (body) => {
   return isNonEmptyString(body.text) && isNonEmptyString(body.client)
 }
 
-const isNonEmptyString = str => {
+const isNonEmptyString = (str) => {
   return typeof str === 'string' && str.length > 0
 }

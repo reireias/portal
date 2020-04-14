@@ -9,7 +9,7 @@ const firebaseConfig = {
   projectId: 'reireias-portal',
   storageBucket: 'reireias-portal.appspot.com',
   messagingSenderId: '677772683837',
-  appId: '1:677772683837:web:eba2226976a57cdaaa5854'
+  appId: '1:677772683837:web:eba2226976a57cdaaa5854',
 }
 
 if (!firebase.apps.length) {

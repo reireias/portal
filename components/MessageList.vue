@@ -19,17 +19,17 @@ import Message from '@/components/Message'
 
 export default {
   components: {
-    Message
+    Message,
   },
   computed: {
-    ...mapGetters(['messages'])
+    ...mapGetters(['messages']),
   },
   created() {
     this.bindMessages()
   },
   methods: {
-    ...mapActions(['bindMessages'])
-  }
+    ...mapActions(['bindMessages']),
+  },
 }
 </script>
 

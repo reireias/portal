@@ -26,12 +26,12 @@ describe('Message', () => {
           createdAt: {
             toDate: () => {
               return new Date('2020/01/01')
-            }
-          }
-        }
+            },
+          },
+        },
       },
       localVue,
-      vuetify
+      vuetify,
     })
     expect(wrapper.isVueInstance()).toBeTruthy()
     expect(wrapper.html()).toMatchSnapshot()
