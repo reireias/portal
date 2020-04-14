@@ -23,14 +23,14 @@ export default {
   props: {
     message: {
       type: Object,
-      required: true
-    }
+      required: true,
+    },
   },
   computed: {
     createdAt() {
       return dateformat(this.message.createdAt.toDate(), 'yyyy/mm/dd HH:MM:ss')
-    }
-  }
+    },
+  },
 }
 </script>
 

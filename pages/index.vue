@@ -13,7 +13,7 @@ import MessageList from '@/components/MessageList'
 
 export default {
   components: {
-    MessageList
-  }
+    MessageList,
+  },
 }
 </script>

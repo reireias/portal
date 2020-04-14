@@ -2,30 +2,30 @@ const test = require('firebase-functions-test')()
 
 test.mockConfig({
   message: {
-    token: 'hogehoge'
-  }
+    token: 'hogehoge',
+  },
 })
 
 jest.mock('firebase-admin', () => {
   const firestore = jest.fn(() => ({
     collection: jest.fn(() => ({
-      add: jest.fn()
-    }))
+      add: jest.fn(),
+    })),
   }))
   firestore.Timestamp = {
-    now: jest.fn(() => 'dummy')
+    now: jest.fn(() => 'dummy'),
   }
   return {
     initializeApp: jest.fn(),
-    firestore
+    firestore,
   }
 })
 const targets = require('../index.js')
 
 describe('GET', () => {
-  it('should be 405 error', done => {
+  it('should be 405 error', (done) => {
     const req = {
-      method: 'GET'
+      method: 'GET',
     }
     const res = {
       status(code) {
@@ -35,7 +35,7 @@ describe('GET', () => {
       send(message) {
         expect(message).toBe('Method Not Allowed')
         done()
-      }
+      },
     }
     targets.postMessage(req, res)
   })
@@ -43,12 +43,12 @@ describe('GET', () => {
 
 describe('POST', () => {
   describe('invalid token', () => {
-    it('should be return Access Denied', done => {
+    it('should be return Access Denied', (done) => {
       const req = {
         method: 'POST',
         body: {
-          token: 'invalid'
-        }
+          token: 'invalid',
+        },
       }
       const res = {
         status(code) {
@@ -58,20 +58,20 @@ describe('POST', () => {
         send(message) {
           expect(message).toBe('Access Denied')
           done()
-        }
+        },
       }
       targets.postMessage(req, res)
     })
   })
 
   describe('invalid body', () => {
-    it('should be return Bad Request', done => {
+    it('should be return Bad Request', (done) => {
       const req = {
         method: 'POST',
         body: {
           token: 'hogehoge',
-          hoge: 'fuga'
-        }
+          hoge: 'fuga',
+        },
       }
       const res = {
         status(code) {
@@ -81,27 +81,27 @@ describe('POST', () => {
         send(message) {
           expect(message).toBe('Bad Request')
           done()
-        }
+        },
       }
       targets.postMessage(req, res)
     })
   })
 
   describe('valid token', () => {
-    it('should be return ok', done => {
+    it('should be return ok', (done) => {
       const req = {
         method: 'POST',
         body: {
           token: 'hogehoge',
           text: 'hoge',
-          client: 'test'
-        }
+          client: 'test',
+        },
       }
       const res = {
         send(message) {
           expect(message).toBe('ok')
           done()
-        }
+        },
       }
       targets.postMessage(req, res)
     })

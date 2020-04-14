@@ -13,7 +13,7 @@ describe('login', () => {
     const vuetify = new Vuetify()
     const wrapper = mount(tartget, {
       localVue,
-      vuetify
+      vuetify,
     })
     expect(wrapper.isVueInstance()).toBeTruthy()
     expect(wrapper.html()).toMatchSnapshot()

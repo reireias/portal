@@ -7,7 +7,7 @@ export const state = () => {
   return {
     loading: true,
     user: null,
-    messages: []
+    messages: [],
   }
 }
 
@@ -16,7 +16,7 @@ export const mutations = {
   setUser(state, user) {
     state.user = user
     state.loading = false
-  }
+  },
 }
 
 export const actions = {
@@ -29,13 +29,13 @@ export const actions = {
   setUser({ commit }, payload) {
     const user = {
       uid: payload.uid,
-      email: payload.email
+      email: payload.email,
     }
     commit('setUser', user)
   },
   unsetUser({ commit }) {
     commit('setUser', null)
-  }
+  },
 }
 
 export const getters = {
@@ -47,5 +47,5 @@ export const getters = {
   },
   messages(state) {
     return state.messages
-  }
+  },
 }
