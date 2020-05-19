@@ -17,7 +17,10 @@ module.exports = {
   plugins: [
     'prettier'
   ],
-  ignorePatterns: ['client/'],
+  ignorePatterns: [
+    'client/',
+    'functions/',
+  ],
   // add your custom rules here
   rules: {
   }
