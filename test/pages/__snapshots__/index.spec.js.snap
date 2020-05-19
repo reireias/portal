@@ -4,7 +4,9 @@ exports[`index is a Vue instance 1`] = `
 "<div class=\\"container\\">
   <div class=\\"row justify-center\\">
     <div class=\\"col-md-8 col-12\\">
-      <div class=\\"container\\"><span></span></div>
+      <div class=\\"container\\">
+        <transition-group-stub name=\\"scroll-x-transition\\"></transition-group-stub>
+      </div>
     </div>
   </div>
 </div>"
