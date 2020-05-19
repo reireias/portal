@@ -120,3 +120,4 @@ sw.*
 
 Dockerfile
 .envrc
+jest.config.js

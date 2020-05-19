@@ -3,7 +3,7 @@ name: main
 on: [push, pull_request]
 
 jobs:
-  main:
+  web:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
