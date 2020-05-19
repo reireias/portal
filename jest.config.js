@@ -14,5 +14,5 @@ module.exports = {
     '<rootDir>/components/**/*.vue',
     '<rootDir>/pages/**/*.vue',
   ],
-  modulePathIgnorePatterns: ['<rootDir>/functions/'],
+  modulePathIgnorePatterns: ['<rootDir>/functions/', '<rootDir>/client/'],
 }

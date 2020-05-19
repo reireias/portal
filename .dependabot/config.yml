@@ -6,3 +6,6 @@ update_configs:
   - package_manager: "javascript"
     directory: "/functions"
     update_schedule: "weekly"
+  - package_manager: "javascript"
+    directory: "/client"
+    update_schedule: "weekly"
