@@ -22,7 +22,7 @@
     "vuexfire": "^3.2.2"
   },
   "devDependencies": {
-    "@mdi/font": "^5.1.45",
+    "@mdi/font": "^5.2.45",
     "@nuxtjs/eslint-config": "^2.0.2",
     "@nuxtjs/eslint-module": "^2.0.0",
     "@nuxtjs/vuetify": "^1.11.2",
