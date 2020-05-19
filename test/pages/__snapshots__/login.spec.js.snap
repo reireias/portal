@@ -2,7 +2,9 @@
 
 exports[`login is a Vue instance 1`] = `
 "<div class=\\"container\\">
-  <!---->
+  <transition-stub name=\\"scroll-y-transition\\">
+    <!---->
+  </transition-stub>
   <div class=\\"row justify-center\\">
     <div class=\\"col-md-6 col-12\\">
       <div class=\\"v-input theme--light v-text-field\\">
@@ -12,7 +14,7 @@ exports[`login is a Vue instance 1`] = `
           </div>
           <div class=\\"v-text-field__details\\">
             <div class=\\"v-messages theme--light\\">
-              <div class=\\"v-messages__wrapper\\"></div>
+              <transition-group-stub tag=\\"div\\" name=\\"message-transition\\" class=\\"v-messages__wrapper\\"></transition-group-stub>
             </div>
           </div>
         </div>
@@ -28,7 +30,7 @@ exports[`login is a Vue instance 1`] = `
           </div>
           <div class=\\"v-text-field__details\\">
             <div class=\\"v-messages theme--light\\">
-              <div class=\\"v-messages__wrapper\\"></div>
+              <transition-group-stub tag=\\"div\\" name=\\"message-transition\\" class=\\"v-messages__wrapper\\"></transition-group-stub>
             </div>
           </div>
         </div>

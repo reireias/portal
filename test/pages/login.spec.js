@@ -15,7 +15,6 @@ describe('login', () => {
       localVue,
       vuetify,
     })
-    expect(wrapper.isVueInstance()).toBeTruthy()
     expect(wrapper.html()).toMatchSnapshot()
   })
 })

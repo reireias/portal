@@ -39,7 +39,6 @@ describe('MessageList', () => {
       store,
       vuetify,
     })
-    expect(wrapper.isVueInstance()).toBeTruthy()
     expect(wrapper.html()).toMatchSnapshot()
     expect(actions.bindMessages).toHaveBeenCalled()
   })
