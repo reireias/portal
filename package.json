@@ -20,7 +20,7 @@
     "dateformat": "^3.0.3",
     "firebase": "^7.15.5",
     "nuxt": "^2.14.0",
-    "vuexfire": "^3.2.2"
+    "vuexfire": "^3.2.4"
   },
   "devDependencies": {
     "@mdi/font": "^5.4.55",
