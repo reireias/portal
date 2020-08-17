@@ -12,7 +12,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "consola": "^2.14.0",
+    "consola": "^2.15.0",
     "firebase-admin": "^9.0.0"
   },
   "devDependencies": {
