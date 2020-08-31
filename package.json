@@ -19,7 +19,7 @@
     "@nuxtjs/pwa": "^3.0.2",
     "dateformat": "^3.0.3",
     "firebase": "^7.19.0",
-    "nuxt": "^2.14.3",
+    "nuxt": "^2.14.4",
     "vuexfire": "^3.2.4"
   },
   "devDependencies": {
