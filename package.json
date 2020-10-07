@@ -15,7 +15,7 @@
     "deploy": "firebase deploy --except functions"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.12.1",
+    "@nuxtjs/axios": "^5.12.2",
     "@nuxtjs/pwa": "^3.0.2",
     "dateformat": "^3.0.3",
     "firebase": "^7.22.1",
