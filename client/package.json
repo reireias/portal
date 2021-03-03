@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "consola": "^2.15.0",
-    "firebase-admin": "^9.4.1"
+    "firebase-admin": "^9.5.0"
   },
   "devDependencies": {
     "eslint": "^7.21.0",
